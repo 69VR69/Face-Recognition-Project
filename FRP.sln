@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FRP", "FRP.vbproj", "{E913CD0E-EE34-4CB5-9541-8EF88C858FFD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E913CD0E-EE34-4CB5-9541-8EF88C858FFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E913CD0E-EE34-4CB5-9541-8EF88C858FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E913CD0E-EE34-4CB5-9541-8EF88C858FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E913CD0E-EE34-4CB5-9541-8EF88C858FFD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {098A07BB-85C6-417B-A44D-084F3580A089}
+	EndGlobalSection
+EndGlobal
