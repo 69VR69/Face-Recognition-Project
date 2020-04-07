@@ -97,7 +97,7 @@ Partial Class frmChoose
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(158, 48)
         Me.btnAdd.TabIndex = 0
-        Me.btnAdd.Text = "add an image"
+        Me.btnAdd.Text = "add an imagess"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
         'frmChoose
