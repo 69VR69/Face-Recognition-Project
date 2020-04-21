@@ -39,6 +39,7 @@ Partial Class frmAnnotation
         Me.btnSfl = New System.Windows.Forms.Button()
         Me.btnE2 = New System.Windows.Forms.Button()
         Me.btnE1 = New System.Windows.Forms.Button()
+        Me.btnBack = New System.Windows.Forms.Button()
         CType(Me.spnAnnotation, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.spnAnnotation.Panel1.SuspendLayout()
         Me.spnAnnotation.Panel2.SuspendLayout()
@@ -54,6 +55,7 @@ Partial Class frmAnnotation
         '
         'spnAnnotation.Panel1
         '
+        Me.spnAnnotation.Panel1.Controls.Add(Me.btnBack)
         Me.spnAnnotation.Panel1.Controls.Add(Me.pnlAnnotation)
         '
         'spnAnnotation.Panel2
@@ -211,6 +213,15 @@ Partial Class frmAnnotation
         Me.btnE1.Text = "E1"
         Me.btnE1.UseVisualStyleBackColor = True
         '
+        'btnBack
+        '
+        Me.btnBack.Location = New System.Drawing.Point(29, 3)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(80, 31)
+        Me.btnBack.TabIndex = 2
+        Me.btnBack.Text = "Back"
+        Me.btnBack.UseVisualStyleBackColor = True
+        '
         'frmAnnotation
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -244,4 +255,5 @@ Partial Class frmAnnotation
     Friend WithEvents btnSfl As Button
     Friend WithEvents btnE2 As Button
     Friend WithEvents btnE1 As Button
+    Friend WithEvents btnBack As Button
 End Class
