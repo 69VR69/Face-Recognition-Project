@@ -39,11 +39,13 @@ Partial Class frmAnnotation
         Me.btnSfl = New System.Windows.Forms.Button()
         Me.btnE2 = New System.Windows.Forms.Button()
         Me.btnE1 = New System.Windows.Forms.Button()
+        Me.PerformanceCounter1 = New System.Diagnostics.PerformanceCounter()
         CType(Me.spnAnnotation, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.spnAnnotation.Panel1.SuspendLayout()
         Me.spnAnnotation.Panel2.SuspendLayout()
         Me.spnAnnotation.SuspendLayout()
         Me.grpAnnotation.SuspendLayout()
+        CType(Me.PerformanceCounter1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'spnAnnotation
@@ -224,6 +226,7 @@ Partial Class frmAnnotation
         CType(Me.spnAnnotation, System.ComponentModel.ISupportInitialize).EndInit()
         Me.spnAnnotation.ResumeLayout(False)
         Me.grpAnnotation.ResumeLayout(False)
+        CType(Me.PerformanceCounter1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -244,4 +247,5 @@ Partial Class frmAnnotation
     Friend WithEvents btnSfl As Button
     Friend WithEvents btnE2 As Button
     Friend WithEvents btnE1 As Button
+    Friend WithEvents PerformanceCounter1 As PerformanceCounter
 End Class
