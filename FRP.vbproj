@@ -128,5 +128,41 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SFL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SFR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SNL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SNR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TL.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

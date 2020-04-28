@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmAnnotation
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,31 +20,31 @@ Partial Class frmAnnotation
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAnnotation))
         Me.spnAnnotation = New System.Windows.Forms.SplitContainer()
-        Me.pnlAnnotation = New System.Windows.Forms.Panel()
-        Me.btnConfirm = New System.Windows.Forms.Button()
         Me.grpAnnotation = New System.Windows.Forms.GroupBox()
-        Me.btnBc = New System.Windows.Forms.Button()
-        Me.btnBn = New System.Windows.Forms.Button()
-        Me.btnLl = New System.Windows.Forms.Button()
-        Me.btnRl = New System.Windows.Forms.Button()
-        Me.btnSnr = New System.Windows.Forms.Button()
-        Me.btnSnl = New System.Windows.Forms.Button()
-        Me.btnTl = New System.Windows.Forms.Button()
-        Me.btnBl = New System.Windows.Forms.Button()
-        Me.btnSfr = New System.Windows.Forms.Button()
-        Me.btnSfl = New System.Windows.Forms.Button()
-        Me.btnE2 = New System.Windows.Forms.Button()
-        Me.btnE1 = New System.Windows.Forms.Button()
+        Me.pnlAnnotation = New System.Windows.Forms.Panel()
+        Me.pnlBC = New System.Windows.Forms.Panel()
+        Me.pnlBN = New System.Windows.Forms.Panel()
+        Me.pnlLL = New System.Windows.Forms.Panel()
+        Me.pnlRL = New System.Windows.Forms.Panel()
+        Me.pnlSNR = New System.Windows.Forms.Panel()
+        Me.pnlBL = New System.Windows.Forms.Panel()
+        Me.pnlTL = New System.Windows.Forms.Panel()
+        Me.pnlSNL = New System.Windows.Forms.Panel()
+        Me.pnlSFR = New System.Windows.Forms.Panel()
+        Me.pnlSFL = New System.Windows.Forms.Panel()
+        Me.pnlE2 = New System.Windows.Forms.Panel()
+        Me.pnlE1 = New System.Windows.Forms.Panel()
         Me.btnBack = New System.Windows.Forms.Button()
+        Me.btnConfirm = New System.Windows.Forms.Button()
         CType(Me.spnAnnotation, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.spnAnnotation.Panel1.SuspendLayout()
         Me.spnAnnotation.Panel2.SuspendLayout()
         Me.spnAnnotation.SuspendLayout()
-        Me.grpAnnotation.SuspendLayout()
+        Me.pnlAnnotation.SuspendLayout()
         Me.SuspendLayout()
         '
         'spnAnnotation
@@ -55,25 +55,178 @@ Partial Class frmAnnotation
         '
         'spnAnnotation.Panel1
         '
-        Me.spnAnnotation.Panel1.Controls.Add(Me.btnBack)
+        Me.spnAnnotation.Panel1.Controls.Add(Me.grpAnnotation)
         Me.spnAnnotation.Panel1.Controls.Add(Me.pnlAnnotation)
         '
         'spnAnnotation.Panel2
         '
+        Me.spnAnnotation.Panel2.Controls.Add(Me.btnBack)
         Me.spnAnnotation.Panel2.Controls.Add(Me.btnConfirm)
-        Me.spnAnnotation.Panel2.Controls.Add(Me.grpAnnotation)
         Me.spnAnnotation.Size = New System.Drawing.Size(532, 483)
         Me.spnAnnotation.SplitterDistance = 341
         Me.spnAnnotation.TabIndex = 1
         '
+        'grpAnnotation
+        '
+        Me.grpAnnotation.Location = New System.Drawing.Point(348, 32)
+        Me.grpAnnotation.Name = "grpAnnotation"
+        Me.grpAnnotation.Size = New System.Drawing.Size(181, 412)
+        Me.grpAnnotation.TabIndex = 0
+        Me.grpAnnotation.TabStop = False
+        Me.grpAnnotation.Text = "Annotation"
+        Me.grpAnnotation.Visible = False
+        '
         'pnlAnnotation
         '
+        Me.pnlAnnotation.AllowDrop = True
         Me.pnlAnnotation.BackgroundImage = CType(resources.GetObject("pnlAnnotation.BackgroundImage"), System.Drawing.Image)
         Me.pnlAnnotation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pnlAnnotation.Location = New System.Drawing.Point(29, 32)
+        Me.pnlAnnotation.Controls.Add(Me.pnlBC)
+        Me.pnlAnnotation.Controls.Add(Me.pnlBN)
+        Me.pnlAnnotation.Controls.Add(Me.pnlLL)
+        Me.pnlAnnotation.Controls.Add(Me.pnlRL)
+        Me.pnlAnnotation.Controls.Add(Me.pnlSNR)
+        Me.pnlAnnotation.Controls.Add(Me.pnlBL)
+        Me.pnlAnnotation.Controls.Add(Me.pnlTL)
+        Me.pnlAnnotation.Controls.Add(Me.pnlSNL)
+        Me.pnlAnnotation.Controls.Add(Me.pnlSFR)
+        Me.pnlAnnotation.Controls.Add(Me.pnlSFL)
+        Me.pnlAnnotation.Controls.Add(Me.pnlE2)
+        Me.pnlAnnotation.Controls.Add(Me.pnlE1)
+        Me.pnlAnnotation.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlAnnotation.Location = New System.Drawing.Point(0, 0)
         Me.pnlAnnotation.Name = "pnlAnnotation"
-        Me.pnlAnnotation.Size = New System.Drawing.Size(294, 412)
+        Me.pnlAnnotation.Size = New System.Drawing.Size(341, 483)
         Me.pnlAnnotation.TabIndex = 0
+        '
+        'pnlBC
+        '
+        Me.pnlBC.AutoSize = True
+        Me.pnlBC.BackgroundImage = Global.FRP.My.Resources.Resources.BC
+        Me.pnlBC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.pnlBC.Location = New System.Drawing.Point(75, 48)
+        Me.pnlBC.Name = "pnlBC"
+        Me.pnlBC.Size = New System.Drawing.Size(30, 30)
+        Me.pnlBC.TabIndex = 18
+        '
+        'pnlBN
+        '
+        Me.pnlBN.AutoSize = True
+        Me.pnlBN.BackgroundImage = Global.FRP.My.Resources.Resources.BN
+        Me.pnlBN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.pnlBN.Location = New System.Drawing.Point(39, 48)
+        Me.pnlBN.Name = "pnlBN"
+        Me.pnlBN.Size = New System.Drawing.Size(30, 30)
+        Me.pnlBN.TabIndex = 17
+        '
+        'pnlLL
+        '
+        Me.pnlLL.AutoSize = True
+        Me.pnlLL.BackgroundImage = Global.FRP.My.Resources.Resources.LL
+        Me.pnlLL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.pnlLL.Location = New System.Drawing.Point(219, 3)
+        Me.pnlLL.Name = "pnlLL"
+        Me.pnlLL.Size = New System.Drawing.Size(30, 30)
+        Me.pnlLL.TabIndex = 16
+        '
+        'pnlRL
+        '
+        Me.pnlRL.AutoSize = True
+        Me.pnlRL.BackgroundImage = Global.FRP.My.Resources.Resources.RL
+        Me.pnlRL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.pnlRL.Location = New System.Drawing.Point(255, 3)
+        Me.pnlRL.Name = "pnlRL"
+        Me.pnlRL.Size = New System.Drawing.Size(30, 30)
+        Me.pnlRL.TabIndex = 15
+        '
+        'pnlSNR
+        '
+        Me.pnlSNR.AutoSize = True
+        Me.pnlSNR.BackgroundImage = Global.FRP.My.Resources.Resources.SNR
+        Me.pnlSNR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.pnlSNR.Location = New System.Drawing.Point(3, 48)
+        Me.pnlSNR.Name = "pnlSNR"
+        Me.pnlSNR.Size = New System.Drawing.Size(30, 30)
+        Me.pnlSNR.TabIndex = 14
+        '
+        'pnlBL
+        '
+        Me.pnlBL.AutoSize = True
+        Me.pnlBL.BackgroundImage = Global.FRP.My.Resources.Resources.BL
+        Me.pnlBL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.pnlBL.Location = New System.Drawing.Point(183, 3)
+        Me.pnlBL.Name = "pnlBL"
+        Me.pnlBL.Size = New System.Drawing.Size(30, 30)
+        Me.pnlBL.TabIndex = 13
+        '
+        'pnlTL
+        '
+        Me.pnlTL.AutoSize = True
+        Me.pnlTL.BackgroundImage = Global.FRP.My.Resources.Resources.TL
+        Me.pnlTL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.pnlTL.Location = New System.Drawing.Point(147, 3)
+        Me.pnlTL.Name = "pnlTL"
+        Me.pnlTL.Size = New System.Drawing.Size(30, 30)
+        Me.pnlTL.TabIndex = 13
+        '
+        'pnlSNL
+        '
+        Me.pnlSNL.AutoSize = True
+        Me.pnlSNL.BackgroundImage = Global.FRP.My.Resources.Resources.SNL
+        Me.pnlSNL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.pnlSNL.Location = New System.Drawing.Point(291, 3)
+        Me.pnlSNL.Name = "pnlSNL"
+        Me.pnlSNL.Size = New System.Drawing.Size(30, 30)
+        Me.pnlSNL.TabIndex = 13
+        '
+        'pnlSFR
+        '
+        Me.pnlSFR.AutoSize = True
+        Me.pnlSFR.BackgroundImage = Global.FRP.My.Resources.Resources.SFR
+        Me.pnlSFR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.pnlSFR.Location = New System.Drawing.Point(111, 3)
+        Me.pnlSFR.Name = "pnlSFR"
+        Me.pnlSFR.Size = New System.Drawing.Size(30, 30)
+        Me.pnlSFR.TabIndex = 13
+        '
+        'pnlSFL
+        '
+        Me.pnlSFL.AutoSize = True
+        Me.pnlSFL.BackgroundImage = Global.FRP.My.Resources.Resources.SFL
+        Me.pnlSFL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.pnlSFL.Location = New System.Drawing.Point(39, 3)
+        Me.pnlSFL.Name = "pnlSFL"
+        Me.pnlSFL.Size = New System.Drawing.Size(30, 30)
+        Me.pnlSFL.TabIndex = 13
+        '
+        'pnlE2
+        '
+        Me.pnlE2.AutoSize = True
+        Me.pnlE2.BackgroundImage = Global.FRP.My.Resources.Resources.E2
+        Me.pnlE2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.pnlE2.Location = New System.Drawing.Point(75, 3)
+        Me.pnlE2.Name = "pnlE2"
+        Me.pnlE2.Size = New System.Drawing.Size(30, 30)
+        Me.pnlE2.TabIndex = 13
+        '
+        'pnlE1
+        '
+        Me.pnlE1.AutoSize = True
+        Me.pnlE1.BackgroundImage = Global.FRP.My.Resources.Resources.E1
+        Me.pnlE1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.pnlE1.Location = New System.Drawing.Point(3, 3)
+        Me.pnlE1.Name = "pnlE1"
+        Me.pnlE1.Size = New System.Drawing.Size(30, 30)
+        Me.pnlE1.TabIndex = 12
+        '
+        'btnBack
+        '
+        Me.btnBack.Location = New System.Drawing.Point(79, 12)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(80, 31)
+        Me.btnBack.TabIndex = 2
+        Me.btnBack.Text = "Back"
+        Me.btnBack.UseVisualStyleBackColor = True
         '
         'btnConfirm
         '
@@ -83,144 +236,6 @@ Partial Class frmAnnotation
         Me.btnConfirm.TabIndex = 1
         Me.btnConfirm.Text = "save"
         Me.btnConfirm.UseVisualStyleBackColor = True
-        '
-        'grpAnnotation
-        '
-        Me.grpAnnotation.Controls.Add(Me.btnBc)
-        Me.grpAnnotation.Controls.Add(Me.btnBn)
-        Me.grpAnnotation.Controls.Add(Me.btnLl)
-        Me.grpAnnotation.Controls.Add(Me.btnRl)
-        Me.grpAnnotation.Controls.Add(Me.btnSnr)
-        Me.grpAnnotation.Controls.Add(Me.btnSnl)
-        Me.grpAnnotation.Controls.Add(Me.btnTl)
-        Me.grpAnnotation.Controls.Add(Me.btnBl)
-        Me.grpAnnotation.Controls.Add(Me.btnSfr)
-        Me.grpAnnotation.Controls.Add(Me.btnSfl)
-        Me.grpAnnotation.Controls.Add(Me.btnE2)
-        Me.grpAnnotation.Controls.Add(Me.btnE1)
-        Me.grpAnnotation.Location = New System.Drawing.Point(15, 30)
-        Me.grpAnnotation.Name = "grpAnnotation"
-        Me.grpAnnotation.Size = New System.Drawing.Size(160, 376)
-        Me.grpAnnotation.TabIndex = 0
-        Me.grpAnnotation.TabStop = False
-        Me.grpAnnotation.Text = "Annotation"
-        '
-        'btnBc
-        '
-        Me.btnBc.Location = New System.Drawing.Point(94, 332)
-        Me.btnBc.Name = "btnBc"
-        Me.btnBc.Size = New System.Drawing.Size(50, 23)
-        Me.btnBc.TabIndex = 11
-        Me.btnBc.Text = "BC"
-        Me.btnBc.UseVisualStyleBackColor = True
-        '
-        'btnBn
-        '
-        Me.btnBn.Location = New System.Drawing.Point(13, 332)
-        Me.btnBn.Name = "btnBn"
-        Me.btnBn.Size = New System.Drawing.Size(48, 23)
-        Me.btnBn.TabIndex = 10
-        Me.btnBn.Text = "BN"
-        Me.btnBn.UseVisualStyleBackColor = True
-        '
-        'btnLl
-        '
-        Me.btnLl.Location = New System.Drawing.Point(94, 271)
-        Me.btnLl.Name = "btnLl"
-        Me.btnLl.Size = New System.Drawing.Size(50, 23)
-        Me.btnLl.TabIndex = 9
-        Me.btnLl.Text = "LL"
-        Me.btnLl.UseVisualStyleBackColor = True
-        '
-        'btnRl
-        '
-        Me.btnRl.Location = New System.Drawing.Point(13, 271)
-        Me.btnRl.Name = "btnRl"
-        Me.btnRl.Size = New System.Drawing.Size(48, 23)
-        Me.btnRl.TabIndex = 8
-        Me.btnRl.Text = "RL"
-        Me.btnRl.UseVisualStyleBackColor = True
-        '
-        'btnSnr
-        '
-        Me.btnSnr.Location = New System.Drawing.Point(94, 212)
-        Me.btnSnr.Name = "btnSnr"
-        Me.btnSnr.Size = New System.Drawing.Size(50, 23)
-        Me.btnSnr.TabIndex = 7
-        Me.btnSnr.Text = "SNR"
-        Me.btnSnr.UseVisualStyleBackColor = True
-        '
-        'btnSnl
-        '
-        Me.btnSnl.Location = New System.Drawing.Point(13, 212)
-        Me.btnSnl.Name = "btnSnl"
-        Me.btnSnl.Size = New System.Drawing.Size(48, 23)
-        Me.btnSnl.TabIndex = 6
-        Me.btnSnl.Text = "SNL"
-        Me.btnSnl.UseVisualStyleBackColor = True
-        '
-        'btnTl
-        '
-        Me.btnTl.Location = New System.Drawing.Point(94, 154)
-        Me.btnTl.Name = "btnTl"
-        Me.btnTl.Size = New System.Drawing.Size(50, 23)
-        Me.btnTl.TabIndex = 5
-        Me.btnTl.Text = "TL"
-        Me.btnTl.UseVisualStyleBackColor = True
-        '
-        'btnBl
-        '
-        Me.btnBl.Location = New System.Drawing.Point(13, 154)
-        Me.btnBl.Name = "btnBl"
-        Me.btnBl.Size = New System.Drawing.Size(48, 23)
-        Me.btnBl.TabIndex = 4
-        Me.btnBl.Text = "BL"
-        Me.btnBl.UseVisualStyleBackColor = True
-        '
-        'btnSfr
-        '
-        Me.btnSfr.Location = New System.Drawing.Point(94, 99)
-        Me.btnSfr.Name = "btnSfr"
-        Me.btnSfr.Size = New System.Drawing.Size(50, 23)
-        Me.btnSfr.TabIndex = 3
-        Me.btnSfr.Text = "SFR"
-        Me.btnSfr.UseVisualStyleBackColor = True
-        '
-        'btnSfl
-        '
-        Me.btnSfl.Location = New System.Drawing.Point(13, 99)
-        Me.btnSfl.Name = "btnSfl"
-        Me.btnSfl.Size = New System.Drawing.Size(48, 23)
-        Me.btnSfl.TabIndex = 2
-        Me.btnSfl.Text = "SFL"
-        Me.btnSfl.UseVisualStyleBackColor = True
-        '
-        'btnE2
-        '
-        Me.btnE2.Location = New System.Drawing.Point(94, 44)
-        Me.btnE2.Name = "btnE2"
-        Me.btnE2.Size = New System.Drawing.Size(50, 23)
-        Me.btnE2.TabIndex = 1
-        Me.btnE2.Text = "E2"
-        Me.btnE2.UseVisualStyleBackColor = True
-        '
-        'btnE1
-        '
-        Me.btnE1.Location = New System.Drawing.Point(13, 44)
-        Me.btnE1.Name = "btnE1"
-        Me.btnE1.Size = New System.Drawing.Size(48, 23)
-        Me.btnE1.TabIndex = 0
-        Me.btnE1.Text = "E1"
-        Me.btnE1.UseVisualStyleBackColor = True
-        '
-        'btnBack
-        '
-        Me.btnBack.Location = New System.Drawing.Point(29, 3)
-        Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(80, 31)
-        Me.btnBack.TabIndex = 2
-        Me.btnBack.Text = "Back"
-        Me.btnBack.UseVisualStyleBackColor = True
         '
         'frmAnnotation
         '
@@ -234,7 +249,8 @@ Partial Class frmAnnotation
         Me.spnAnnotation.Panel2.ResumeLayout(False)
         CType(Me.spnAnnotation, System.ComponentModel.ISupportInitialize).EndInit()
         Me.spnAnnotation.ResumeLayout(False)
-        Me.grpAnnotation.ResumeLayout(False)
+        Me.pnlAnnotation.ResumeLayout(False)
+        Me.pnlAnnotation.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -243,17 +259,17 @@ Partial Class frmAnnotation
     Friend WithEvents pnlAnnotation As Panel
     Friend WithEvents btnConfirm As Button
     Friend WithEvents grpAnnotation As GroupBox
-    Friend WithEvents btnBc As Button
-    Friend WithEvents btnBn As Button
-    Friend WithEvents btnLl As Button
-    Friend WithEvents btnRl As Button
-    Friend WithEvents btnSnr As Button
-    Friend WithEvents btnSnl As Button
-    Friend WithEvents btnTl As Button
-    Friend WithEvents btnBl As Button
-    Friend WithEvents btnSfr As Button
-    Friend WithEvents btnSfl As Button
-    Friend WithEvents btnE2 As Button
-    Friend WithEvents btnE1 As Button
     Friend WithEvents btnBack As Button
+    Friend WithEvents pnlE1 As Panel
+    Friend WithEvents pnlE2 As Panel
+    Friend WithEvents pnlBC As Panel
+    Friend WithEvents pnlBN As Panel
+    Friend WithEvents pnlLL As Panel
+    Friend WithEvents pnlRL As Panel
+    Friend WithEvents pnlSNR As Panel
+    Friend WithEvents pnlBL As Panel
+    Friend WithEvents pnlTL As Panel
+    Friend WithEvents pnlSNL As Panel
+    Friend WithEvents pnlSFR As Panel
+    Friend WithEvents pnlSFL As Panel
 End Class
