@@ -1,13 +1,8 @@
 ﻿Imports System.IO
 
-Public Class frmChoose
-
+Public Class StorageManager
     Private fileName As String
     Private filePath As String
-    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        openImage()
-    End Sub
-
     Private Sub openImage()
         Dim newFile As Stream = Nothing
         Dim fileDialog As New OpenFileDialog()
@@ -37,5 +32,19 @@ Public Class frmChoose
             End Try
         End If
     End Sub
+
+    Private Sub createCsv()
+
+    End Sub
+
+    Private Sub readAnnotation()
+
+    End Sub
+
+    Private Sub writeAnnotation()
+
+    End Sub
+
+
 
 End Class
