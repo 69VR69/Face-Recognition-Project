@@ -1,16 +1,7 @@
 ﻿Imports System.Runtime.CompilerServices
 
 Public Class frmAnnotation
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    Public annotation As Panel()
-=======
     Private PanelList As ArrayList = New ArrayList()
->>>>>>> d6d4009728d7711da290fae97d990f3a4016cd33
-=======
-    Private PanelList As ArrayList = New ArrayList()
->>>>>>> d6d4009728d7711da290fae97d990f3a4016cd33
     Private allowCoolMove As Boolean = False
     Private myCoolPoint As New Point
     Private i As Panel

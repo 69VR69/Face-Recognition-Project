@@ -1,5 +1,9 @@
 ﻿Public Class DataManager
-    Private ReadOnly storageManager As New StorageManager
+
+    Public Sub New(ByRef storageManager As StorageManager)
+        Me.storageManager = storageManager
+    End Sub
+    Private storageManager As StorageManager
     'TODO: protect from double imageName
     Public Function AddAnnotation(ByVal name As String, ByVal annotation As Panel()) As String()
         Dim newAnnotation As String() = Nothing
@@ -15,7 +19,7 @@
     End Function
     Public Sub LoadAnnotation(ByVal name As String)
         Try
-            Dim annotation As Panel() = My.Forms.frmAnnotation.annotation
+            'Dim annotation As Panel() = My.Forms.frmAnnotation.annotation
             For Each s In SearchAnnotatedImage(name)
 
             Next
@@ -28,7 +32,7 @@
         Dim rowString As String() = Nothing
         Dim index As Integer = 0
         Dim dataRow As DataRow() = storageManager.annotationDataTable.Select("fileName = " & imageName)
-        rowString = String.Join(",", dataRow.ItemArray).Split(",").ToArray()
+        'rowString = String.Join(",", dataRow.ItemArray).Split(",").ToArray()
 
         For Each dr In dataRow
             rowString(index) += dr.ToString()

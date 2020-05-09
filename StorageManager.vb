@@ -6,7 +6,7 @@ Public Class StorageManager 'TODO: problème si j'ajoute 2 fois la même personn
     Private filePath As String = "C:\Users\afouq\Google Drive\Projet tutoré\IHM Face Recognition Project\Code\FRP\Face-Recognition-Project\res\Annotation.csv"
     Public headerString As String()
     Public annotationDataTable As DataTable = Nothing
-    Private dataManager As New DataManager
+    Private dataManager As New DataManager(Me)
     Public imagePath As String
 
     Public Function OpenImage() As Image
@@ -125,9 +125,9 @@ Public Class StorageManager 'TODO: problème si j'ajoute 2 fois la même personn
         Next
 
         'Add new row
-        For Each s In dataManager.addAnnotation(imageName, annotation)
-            csv += s & ";"c
-        Next
+        'For Each s In dataManager.AddAnnotation(imageName, annotation)
+        ' csv += s & ";"c
+        'Next
 
         File.WriteAllText(filePath, csv)
     End Sub
