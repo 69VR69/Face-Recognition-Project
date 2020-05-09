@@ -1,13 +1,18 @@
 ﻿Imports System.Data.OleDb
 Imports System.IO
 
-Public Class StorageManager
-    Private fileName As String = "Annotation.csv"
+Public Class StorageManager 'TODO: problème si j'ajoute 2 fois la même personne
+    Public fileName As String = "Annotation.csv"
     Private filePath As String = "C:\Users\afouq\Google Drive\Projet tutoré\IHM Face Recognition Project\Code\FRP\Face-Recognition-Project\res\Annotation.csv"
-    Private Sub openImage()
+    Public headerString As String()
+    Public annotationDataTable As DataTable = Nothing
+    Private dataManager As New DataManager
+    Public imagePath As String
+
+    Public Function OpenImage() As Image
         Dim newFile As Stream = Nothing
         Dim fileDialog As New OpenFileDialog()
-
+        Dim image As Image = Nothing
         fileDialog.InitialDirectory = "c:\"
         fileDialog.Filter = "*.png|*.png|*.jpg|*.jpg"
         fileDialog.FilterIndex = 2
@@ -17,12 +22,8 @@ Public Class StorageManager
             Try
                 newFile = fileDialog.OpenFile()
                 If (newFile IsNot Nothing) Then
-                    fileName = fileDialog.FileName()
-                    filePath = fileDialog.SafeFileName()
-                    Dim image As Image = Image.FromStream(newFile)
-                    My.Forms.frmAnnotation.pnlAnnotation.BackgroundImage = image
-                    My.Forms.frmChoose.Hide()
-                    frmAnnotation.ShowDialog()
+                    imagePath = fileDialog.FileName()
+                    image = Image.FromStream(newFile)
                 End If
             Catch Ex As Exception
                 MessageBox.Show("Cannot read file from disk. Original error: " & Ex.Message)
@@ -32,50 +33,59 @@ Public Class StorageManager
                 End If
             End Try
         End If
-    End Sub
+        Return image
+    End Function
+    Public Function OpenImage(ByVal imagePath As String) As Image
+        Dim image As Image = Image.FromFile(imagePath)
+        Me.imagePath = imagePath
+        Return image
+    End Function
+    'TODO: add organizer to read/write annotation + protect from double imageName
+    Public Sub ReadAnnotation()
 
-    Public Sub readAnnotation()
 
-        'Create and config the tool to explore the csv file
         Dim TextFileReader As New Microsoft.VisualBasic.FileIO.TextFieldParser(filePath)
         TextFileReader.TextFieldType = FileIO.FieldType.Delimited
         TextFileReader.SetDelimiters(";")
-
-        'Create variables to contain annotations while the program is running
-        Dim TextFileTable As DataTable = Nothing
         Dim Column As DataColumn
         Dim Row As DataRow
         Dim ColumnOnRow As Int32
         Dim ColumnCount As Int32
-        Dim CurrentRow As String()
+        Dim CurrentRow As String() = Nothing
+        Dim header As Boolean = True
+        Dim headerIndex As Integer = 0
 
         While Not TextFileReader.EndOfData
             Try
-                CurrentRow = TextFileReader.ReadFields() 'read row
-
+                If header Then
+                    headerString = TextFileReader.ReadFields()
+                    header = False
+                Else
+                    CurrentRow = TextFileReader.ReadFields()
+                End If
                 If CurrentRow IsNot Nothing Then
 
-                    If TextFileTable Is Nothing Then 'check if the row we're going to fill into DataTable is empty
+                    If annotationDataTable Is Nothing Then
 
-                        TextFileTable = New DataTable()
+                        annotationDataTable = New DataTable()
                         ColumnOnRow = CurrentRow.GetUpperBound(0)
 
-                        For ColumnCount = 1 To ColumnOnRow
+                        For ColumnCount = 0 To ColumnOnRow
                             Column = New DataColumn()
                             Column.DataType = System.Type.GetType("System.String")
-                            Column.ColumnName = "Column" & ColumnCount
+                            Column.ColumnName = headerString(headerIndex)
+                            headerIndex += 1
                             Column.Caption = "Col" & ColumnCount
                             Column.ReadOnly = True
                             Column.Unique = False
-                            TextFileTable.Columns.Add(Column)
+                            annotationDataTable.Columns.Add(Column)
                         Next
-
                     End If
-                    Row = TextFileTable.NewRow
-                    For ColumnCount = 1 To ColumnOnRow
-                        Row("Column" & ColumnCount) = CurrentRow(ColumnCount).ToString
+                    Row = annotationDataTable.NewRow
+                    For ColumnCount = 0 To ColumnOnRow
+                        Row(headerString(ColumnCount)) = CurrentRow(ColumnCount).ToString
                     Next
-                    TextFileTable.Rows.Add(Row)
+                    annotationDataTable.Rows.Add(Row)
 
                 End If
 
@@ -87,11 +97,39 @@ Public Class StorageManager
         End While
         TextFileReader.Dispose()
         'Show data
-        My.Forms.TEST.DataGridView1.DataSource = TextFileTable
+        My.Forms.TEST.DataGridView1.DataSource = annotationDataTable
     End Sub
+    'TODO: Save need an interface to write the newName
+    Public Sub SaveImage(ByVal imagePath As String, ByVal imageNewName As String, ByVal annotation As Panel())
+        MoveImage(imagePath, imageNewName)
+        WriteAnnotation(imageNewName, annotation)
+    End Sub
+    Private Sub MoveImage(ByVal imagePath As String, ByVal imageNewName As String)
+        My.Computer.FileSystem.CopyFile(imagePath, "C:\Users\afouq\Google Drive\Projet tutoré\IHM Face Recognition Project\Code\FRP\Face-Recognition-Project\res\img\" & imageNewName)
+    End Sub
+    Public Sub WriteAnnotation(ByVal imageName As String, ByVal annotation As Panel())
+        Dim csv As String = String.Empty
 
-    Private Sub writeAnnotation()
+        'Add header row
+        For Each h In headerString
+            csv += h & ";"c
+        Next
+        csv += vbCr & vbLf
 
+        'Add rows
+        For Each row In annotationDataTable.Rows
+            For Each column In annotationDataTable.Columns
+                csv += row(column) & ";"c
+            Next
+            csv += vbCr & vbLf
+        Next
+
+        'Add new row
+        For Each s In dataManager.addAnnotation(imageName, annotation)
+            csv += s & ";"c
+        Next
+
+        File.WriteAllText(filePath, csv)
     End Sub
 
 End Class

@@ -2,7 +2,7 @@
 
 Public Class frmAnnotation
 
-
+    Public annotation As Panel()
     Private allowCoolMove As Boolean = False
     Private myCoolPoint As New Point
     Private Sub Pnl_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles pnlE1.MouseDown, pnlE2.MouseDown,
