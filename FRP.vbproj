@@ -73,7 +73,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="DataManager.vb" />
+=======
+    <Compile Include="Annotation.vb" />
+>>>>>>> d6d4009728d7711da290fae97d990f3a4016cd33
     <Compile Include="StorageManager.vb" />
     <Compile Include="frmHome.vb">
       <SubType>Form</SubType>

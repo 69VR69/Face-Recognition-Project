@@ -92,6 +92,7 @@ Partial Class frmAnnotation
         Me.pnlBC.Name = "pnlBC"
         Me.pnlBC.Size = New System.Drawing.Size(30, 30)
         Me.pnlBC.TabIndex = 18
+        Me.pnlBC.Tag = "the bottom of the chin"
         '
         'pnlBN
         '
@@ -103,6 +104,7 @@ Partial Class frmAnnotation
         Me.pnlBN.Name = "pnlBN"
         Me.pnlBN.Size = New System.Drawing.Size(30, 30)
         Me.pnlBN.TabIndex = 17
+        Me.pnlBN.Tag = "the bottom of the nose"
         '
         'pnlLL
         '
@@ -114,6 +116,7 @@ Partial Class frmAnnotation
         Me.pnlLL.Name = "pnlLL"
         Me.pnlLL.Size = New System.Drawing.Size(30, 30)
         Me.pnlLL.TabIndex = 16
+        Me.pnlLL.Tag = "the left of side of the lips"
         '
         'pnlRL
         '
@@ -125,6 +128,7 @@ Partial Class frmAnnotation
         Me.pnlRL.Name = "pnlRL"
         Me.pnlRL.Size = New System.Drawing.Size(30, 30)
         Me.pnlRL.TabIndex = 15
+        Me.pnlRL.Tag = "the right of side of the lips"
         '
         'pnlSNR
         '
@@ -136,6 +140,7 @@ Partial Class frmAnnotation
         Me.pnlSNR.Name = "pnlSNR"
         Me.pnlSNR.Size = New System.Drawing.Size(30, 30)
         Me.pnlSNR.TabIndex = 14
+        Me.pnlSNR.Tag = "the side of the nose that is the most to the left"
         '
         'pnlBL
         '
@@ -147,6 +152,7 @@ Partial Class frmAnnotation
         Me.pnlBL.Name = "pnlBL"
         Me.pnlBL.Size = New System.Drawing.Size(30, 30)
         Me.pnlBL.TabIndex = 13
+        Me.pnlBL.Tag = "the bottom of the lips"
         '
         'pnlTL
         '
@@ -158,6 +164,7 @@ Partial Class frmAnnotation
         Me.pnlTL.Name = "pnlTL"
         Me.pnlTL.Size = New System.Drawing.Size(30, 30)
         Me.pnlTL.TabIndex = 13
+        Me.pnlTL.Tag = "the top of the lips"
         '
         'pnlSNL
         '
@@ -169,6 +176,7 @@ Partial Class frmAnnotation
         Me.pnlSNL.Name = "pnlSNL"
         Me.pnlSNL.Size = New System.Drawing.Size(30, 30)
         Me.pnlSNL.TabIndex = 13
+        Me.pnlSNL.Tag = "the side of the nose that is the most to the left"
         '
         'pnlSFR
         '
@@ -180,6 +188,7 @@ Partial Class frmAnnotation
         Me.pnlSFR.Name = "pnlSFR"
         Me.pnlSFR.Size = New System.Drawing.Size(30, 30)
         Me.pnlSFR.TabIndex = 13
+        Me.pnlSFR.Tag = "the side of the face that is the most to the right "
         '
         'pnlSFL
         '
@@ -191,6 +200,7 @@ Partial Class frmAnnotation
         Me.pnlSFL.Name = "pnlSFL"
         Me.pnlSFL.Size = New System.Drawing.Size(30, 30)
         Me.pnlSFL.TabIndex = 13
+        Me.pnlSFL.Tag = "the side of the face that is the most to the left"
         '
         'pnlE2
         '
@@ -202,6 +212,7 @@ Partial Class frmAnnotation
         Me.pnlE2.Name = "pnlE2"
         Me.pnlE2.Size = New System.Drawing.Size(30, 30)
         Me.pnlE2.TabIndex = 13
+        Me.pnlE2.Tag = "center of the right eye"
         '
         'pnlE1
         '
@@ -213,6 +224,7 @@ Partial Class frmAnnotation
         Me.pnlE1.Name = "pnlE1"
         Me.pnlE1.Size = New System.Drawing.Size(30, 30)
         Me.pnlE1.TabIndex = 12
+        Me.pnlE1.Tag = "center of the left eye"
         '
         'Label1
         '
