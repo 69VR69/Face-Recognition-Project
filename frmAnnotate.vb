@@ -2,6 +2,8 @@
 
 Public Class frmAnnotation
     Private PanelList(11) As Panel
+    Public ModifyMode As Boolean = False
+    Private modifiedFileName As String
     Private allowCoolMove As Boolean = False
     Private myCoolPoint As New Point
     Private i As Panel
@@ -21,6 +23,12 @@ Public Class frmAnnotation
         PanelList(9) = pnlSNL
         PanelList(10) = pnlSNR
         PanelList(11) = pnlTL
+        If ModifyMode Then
+            modifiedFileName = InputBox("Enter the name", "Enter the name", "")
+            modifiedFileName &= ".png"
+            My.Forms.frmChoose.storageManager.dataManager.LoadAnnotation(modifiedFileName, PanelList)
+            pnlAnnotation.BackgroundImage = My.Forms.frmChoose.storageManager.OpenImage(modifiedFileName)
+        End If
     End Sub
 
     Private Sub Pnl_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles pnlE1.MouseDown, pnlE2.MouseDown,
@@ -59,12 +67,24 @@ Public Class frmAnnotation
     End Sub
 
     Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-        My.Forms.frmAnnotation.Hide()
+        BackToHome()
+    End Sub
+
+    Private Sub BackToHome()
         My.Forms.frmChoose.Show()
+        My.Forms.frmAnnotation.Close()
+        My.Forms.frmChoose.Init()
     End Sub
 
     Private Sub BtnConfirm_Click(sender As Object, e As EventArgs) Handles btnConfirm.Click
-        Dim newImageName As String = InputBox("Enter the name", "Enter the name", "Please Enter the name")
-        My.Forms.frmChoose.storageManager.SaveImage(My.Forms.frmChoose.storageManager.imagePath, newImageName, PanelList)
+        If ModifyMode Then
+            My.Forms.frmChoose.storageManager.SaveModifiedImage(modifiedFileName, PanelList)
+            ModifyMode = False
+        Else
+            Dim newImageName As String = InputBox("Enter the name", "Enter the name", "")
+            newImageName &= ".png"
+            My.Forms.frmChoose.storageManager.SaveImage(My.Forms.frmChoose.storageManager.imagePath, newImageName, PanelList)
+        End If
+        BackToHome()
     End Sub
 End Class

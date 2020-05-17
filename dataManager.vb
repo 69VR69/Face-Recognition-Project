@@ -4,29 +4,32 @@
         Me.storageManager = storageManager
     End Sub
     Private ReadOnly storageManager As StorageManager
-    'TODO: protect from double imageName
-    Public Function AddAnnotation(ByVal name As String, ByRef annotation As Panel()) As String()
-        Dim newAnnotation As String() = Nothing
-        Dim index As Integer = 1
-        newAnnotation(0) = name 'TODO: bug NPE
-        For i = 0 To 11
-            newAnnotation(index) = annotation(i).Location.X + (annotation(i).Size.Width / 2)
-            index += 1
-            newAnnotation(index) = annotation(i).Location.Y + (annotation(i).Size.Height / 2)
-            index += 1
-        Next
-        Return newAnnotation
-    End Function
-    Public Sub LoadAnnotation(ByVal name As String)
-        Try
-            'Dim annotation As Panel() = My.Forms.frmAnnotation.annotation
-            For Each s In SearchAnnotatedImage(name)
 
+    Public Function AddAnnotation(ByVal name As String, ByVal annotation As Panel()) As String()
+        If annotation IsNot Nothing Then
+            Dim newAnnotation As New List(Of String) From {name}
+            For Each a In annotation
+                newAnnotation.Add(a.Location.X)
+                newAnnotation.Add(a.Location.Y)
             Next
+            Return newAnnotation.ToArray
+        End If
+        Return {"lolihuuvgvygvgyvjbijhuvyyvughb"}
+    End Function
 
-        Catch ex As Exception
-            MessageBox.Show("Cannot load annotations. Original error: " & ex.Message)
-        End Try
+    Public Sub LoadAnnotation(ByVal name As String, ByRef panelList As Panel())
+        Dim annotationArray As String() = SearchAnnotatedImage(name)
+        If annotationArray.Length > 0 Then
+            Dim index As Integer = 1
+            For Each p In panelList
+                Dim x As Integer = Integer.Parse(annotationArray(index))
+                Dim y As Integer = Integer.Parse(annotationArray(index + 1))
+                index += 2
+                p.Location = New Point(x, y)
+            Next
+        Else
+            MessageBox.Show("file not found")
+        End If
     End Sub
     Public Function SearchAnnotatedImage(ByVal imageName As String) As String()
         Dim rowString As New List(Of String)
