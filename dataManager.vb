@@ -14,7 +14,7 @@
             Next
             Return newAnnotation.ToArray
         End If
-        Return {"lolihuuvgvygvgyvjbijhuvyyvughb"}
+        Return {""}
     End Function
 
     Public Sub LoadAnnotation(ByVal name As String, ByRef panelList As Panel())
@@ -26,6 +26,7 @@
                 Dim y As Integer = Integer.Parse(annotationArray(index + 1))
                 index += 2
                 p.Location = New Point(x, y)
+                p.Visible = True
             Next
         Else
             MessageBox.Show("file not found")

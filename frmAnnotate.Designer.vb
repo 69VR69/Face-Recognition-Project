@@ -25,6 +25,7 @@ Partial Class frmAnnotation
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAnnotation))
         Me.btnConfirm = New System.Windows.Forms.Button()
         Me.btnBack = New System.Windows.Forms.Button()
+        Me.lblDescription = New System.Windows.Forms.Label()
         Me.pnlAnnotation = New System.Windows.Forms.Panel()
         Me.pnlBC = New System.Windows.Forms.Panel()
         Me.pnlBN = New System.Windows.Forms.Panel()
@@ -38,13 +39,12 @@ Partial Class frmAnnotation
         Me.pnlSFL = New System.Windows.Forms.Panel()
         Me.pnlE2 = New System.Windows.Forms.Panel()
         Me.pnlE1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.pnlAnnotation.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnConfirm
         '
-        Me.btnConfirm.Location = New System.Drawing.Point(301, 446)
+        Me.btnConfirm.Location = New System.Drawing.Point(391, 446)
         Me.btnConfirm.Name = "btnConfirm"
         Me.btnConfirm.Size = New System.Drawing.Size(63, 34)
         Me.btnConfirm.TabIndex = 1
@@ -59,6 +59,14 @@ Partial Class frmAnnotation
         Me.btnBack.TabIndex = 2
         Me.btnBack.Text = "Back"
         Me.btnBack.UseVisualStyleBackColor = True
+        '
+        'lblDescription
+        '
+        Me.lblDescription.Location = New System.Drawing.Point(78, 450)
+        Me.lblDescription.Name = "lblDescription"
+        Me.lblDescription.Size = New System.Drawing.Size(316, 28)
+        Me.lblDescription.TabIndex = 3
+        Me.lblDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'pnlAnnotation
         '
@@ -79,7 +87,7 @@ Partial Class frmAnnotation
         Me.pnlAnnotation.Controls.Add(Me.pnlE1)
         Me.pnlAnnotation.Location = New System.Drawing.Point(0, 0)
         Me.pnlAnnotation.Name = "pnlAnnotation"
-        Me.pnlAnnotation.Size = New System.Drawing.Size(364, 447)
+        Me.pnlAnnotation.Size = New System.Drawing.Size(454, 447)
         Me.pnlAnnotation.TabIndex = 0
         '
         'pnlBC
@@ -88,11 +96,11 @@ Partial Class frmAnnotation
         Me.pnlBC.BackColor = System.Drawing.Color.Transparent
         Me.pnlBC.BackgroundImage = CType(resources.GetObject("pnlBC.BackgroundImage"), System.Drawing.Image)
         Me.pnlBC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.pnlBC.Location = New System.Drawing.Point(305, 407)
+        Me.pnlBC.Location = New System.Drawing.Point(411, 84)
         Me.pnlBC.Name = "pnlBC"
         Me.pnlBC.Size = New System.Drawing.Size(30, 30)
         Me.pnlBC.TabIndex = 18
-        Me.pnlBC.Tag = "the bottom of the chin"
+        Me.pnlBC.Tag = "Bottom of the chin"
         '
         'pnlBN
         '
@@ -100,11 +108,11 @@ Partial Class frmAnnotation
         Me.pnlBN.BackColor = System.Drawing.Color.Transparent
         Me.pnlBN.BackgroundImage = CType(resources.GetObject("pnlBN.BackgroundImage"), System.Drawing.Image)
         Me.pnlBN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.pnlBN.Location = New System.Drawing.Point(305, 48)
+        Me.pnlBN.Location = New System.Drawing.Point(411, 156)
         Me.pnlBN.Name = "pnlBN"
         Me.pnlBN.Size = New System.Drawing.Size(30, 30)
         Me.pnlBN.TabIndex = 17
-        Me.pnlBN.Tag = "the bottom of the nose"
+        Me.pnlBN.Tag = "Bottom of the nose"
         '
         'pnlLL
         '
@@ -112,11 +120,11 @@ Partial Class frmAnnotation
         Me.pnlLL.BackColor = System.Drawing.Color.Transparent
         Me.pnlLL.BackgroundImage = CType(resources.GetObject("pnlLL.BackgroundImage"), System.Drawing.Image)
         Me.pnlLL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.pnlLL.Location = New System.Drawing.Point(305, 263)
+        Me.pnlLL.Location = New System.Drawing.Point(411, 192)
         Me.pnlLL.Name = "pnlLL"
         Me.pnlLL.Size = New System.Drawing.Size(30, 30)
         Me.pnlLL.TabIndex = 16
-        Me.pnlLL.Tag = "the left of side of the lips"
+        Me.pnlLL.Tag = "Left side of the lips"
         '
         'pnlRL
         '
@@ -124,11 +132,11 @@ Partial Class frmAnnotation
         Me.pnlRL.BackColor = System.Drawing.Color.Transparent
         Me.pnlRL.BackgroundImage = CType(resources.GetObject("pnlRL.BackgroundImage"), System.Drawing.Image)
         Me.pnlRL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.pnlRL.Location = New System.Drawing.Point(305, 299)
+        Me.pnlRL.Location = New System.Drawing.Point(411, 228)
         Me.pnlRL.Name = "pnlRL"
         Me.pnlRL.Size = New System.Drawing.Size(30, 30)
         Me.pnlRL.TabIndex = 15
-        Me.pnlRL.Tag = "the right of side of the lips"
+        Me.pnlRL.Tag = "Right side of the lips"
         '
         'pnlSNR
         '
@@ -136,11 +144,11 @@ Partial Class frmAnnotation
         Me.pnlSNR.BackColor = System.Drawing.Color.Transparent
         Me.pnlSNR.BackgroundImage = CType(resources.GetObject("pnlSNR.BackgroundImage"), System.Drawing.Image)
         Me.pnlSNR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.pnlSNR.Location = New System.Drawing.Point(305, 371)
+        Me.pnlSNR.Location = New System.Drawing.Point(411, 372)
         Me.pnlSNR.Name = "pnlSNR"
         Me.pnlSNR.Size = New System.Drawing.Size(30, 30)
         Me.pnlSNR.TabIndex = 14
-        Me.pnlSNR.Tag = "the side of the nose that is the most to the left"
+        Me.pnlSNR.Tag = "Right side of the nose"
         '
         'pnlBL
         '
@@ -148,11 +156,11 @@ Partial Class frmAnnotation
         Me.pnlBL.BackColor = System.Drawing.Color.Transparent
         Me.pnlBL.BackgroundImage = CType(resources.GetObject("pnlBL.BackgroundImage"), System.Drawing.Image)
         Me.pnlBL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.pnlBL.Location = New System.Drawing.Point(305, 227)
+        Me.pnlBL.Location = New System.Drawing.Point(411, 120)
         Me.pnlBL.Name = "pnlBL"
         Me.pnlBL.Size = New System.Drawing.Size(30, 30)
         Me.pnlBL.TabIndex = 13
-        Me.pnlBL.Tag = "the bottom of the lips"
+        Me.pnlBL.Tag = "Bottom of the lips"
         '
         'pnlTL
         '
@@ -160,11 +168,11 @@ Partial Class frmAnnotation
         Me.pnlTL.BackColor = System.Drawing.Color.Transparent
         Me.pnlTL.BackgroundImage = CType(resources.GetObject("pnlTL.BackgroundImage"), System.Drawing.Image)
         Me.pnlTL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.pnlTL.Location = New System.Drawing.Point(305, 191)
+        Me.pnlTL.Location = New System.Drawing.Point(411, 408)
         Me.pnlTL.Name = "pnlTL"
         Me.pnlTL.Size = New System.Drawing.Size(30, 30)
         Me.pnlTL.TabIndex = 13
-        Me.pnlTL.Tag = "the top of the lips"
+        Me.pnlTL.Tag = "Top of the lips"
         '
         'pnlSNL
         '
@@ -172,11 +180,11 @@ Partial Class frmAnnotation
         Me.pnlSNL.BackColor = System.Drawing.Color.Transparent
         Me.pnlSNL.BackgroundImage = CType(resources.GetObject("pnlSNL.BackgroundImage"), System.Drawing.Image)
         Me.pnlSNL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.pnlSNL.Location = New System.Drawing.Point(305, 12)
+        Me.pnlSNL.Location = New System.Drawing.Point(411, 336)
         Me.pnlSNL.Name = "pnlSNL"
         Me.pnlSNL.Size = New System.Drawing.Size(30, 30)
         Me.pnlSNL.TabIndex = 13
-        Me.pnlSNL.Tag = "the side of the nose that is the most to the left"
+        Me.pnlSNL.Tag = "Left side of the nose"
         '
         'pnlSFR
         '
@@ -184,11 +192,11 @@ Partial Class frmAnnotation
         Me.pnlSFR.BackColor = System.Drawing.Color.Transparent
         Me.pnlSFR.BackgroundImage = CType(resources.GetObject("pnlSFR.BackgroundImage"), System.Drawing.Image)
         Me.pnlSFR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.pnlSFR.Location = New System.Drawing.Point(305, 156)
+        Me.pnlSFR.Location = New System.Drawing.Point(411, 300)
         Me.pnlSFR.Name = "pnlSFR"
         Me.pnlSFR.Size = New System.Drawing.Size(30, 30)
         Me.pnlSFR.TabIndex = 13
-        Me.pnlSFR.Tag = "the side of the face that is the most to the right "
+        Me.pnlSFR.Tag = "Right side of the face"
         '
         'pnlSFL
         '
@@ -196,11 +204,11 @@ Partial Class frmAnnotation
         Me.pnlSFL.BackColor = System.Drawing.Color.Transparent
         Me.pnlSFL.BackgroundImage = CType(resources.GetObject("pnlSFL.BackgroundImage"), System.Drawing.Image)
         Me.pnlSFL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.pnlSFL.Location = New System.Drawing.Point(305, 84)
+        Me.pnlSFL.Location = New System.Drawing.Point(411, 264)
         Me.pnlSFL.Name = "pnlSFL"
         Me.pnlSFL.Size = New System.Drawing.Size(30, 30)
         Me.pnlSFL.TabIndex = 13
-        Me.pnlSFL.Tag = "the side of the face that is the most to the left"
+        Me.pnlSFL.Tag = "Left side of the face"
         '
         'pnlE2
         '
@@ -208,11 +216,11 @@ Partial Class frmAnnotation
         Me.pnlE2.BackColor = System.Drawing.Color.Transparent
         Me.pnlE2.BackgroundImage = CType(resources.GetObject("pnlE2.BackgroundImage"), System.Drawing.Image)
         Me.pnlE2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.pnlE2.Location = New System.Drawing.Point(305, 120)
+        Me.pnlE2.Location = New System.Drawing.Point(411, 48)
         Me.pnlE2.Name = "pnlE2"
         Me.pnlE2.Size = New System.Drawing.Size(30, 30)
         Me.pnlE2.TabIndex = 13
-        Me.pnlE2.Tag = "center of the right eye"
+        Me.pnlE2.Tag = "Center of the right eye"
         '
         'pnlE1
         '
@@ -220,29 +228,24 @@ Partial Class frmAnnotation
         Me.pnlE1.BackColor = System.Drawing.Color.Transparent
         Me.pnlE1.BackgroundImage = CType(resources.GetObject("pnlE1.BackgroundImage"), System.Drawing.Image)
         Me.pnlE1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.pnlE1.Location = New System.Drawing.Point(305, 335)
+        Me.pnlE1.Location = New System.Drawing.Point(411, 12)
         Me.pnlE1.Name = "pnlE1"
         Me.pnlE1.Size = New System.Drawing.Size(30, 30)
         Me.pnlE1.TabIndex = 12
-        Me.pnlE1.Tag = "center of the left eye"
-        '
-        'Label1
-        '
-        Me.Label1.Location = New System.Drawing.Point(78, 450)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(225, 28)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Label1"
+        Me.pnlE1.Tag = "Center of the left eye"
         '
         'frmAnnotation
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(366, 480)
-        Me.Controls.Add(Me.Label1)
+        Me.ClientSize = New System.Drawing.Size(453, 480)
+        Me.Controls.Add(Me.lblDescription)
         Me.Controls.Add(Me.pnlAnnotation)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.btnConfirm)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "frmAnnotation"
         Me.Text = "FRP"
         Me.pnlAnnotation.ResumeLayout(False)
@@ -265,5 +268,5 @@ Partial Class frmAnnotation
     Friend WithEvents pnlSFL As Panel
     Friend WithEvents pnlE2 As Panel
     Friend WithEvents pnlE1 As Panel
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lblDescription As Label
 End Class
